@@ -24,7 +24,7 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Finance Graduate</p>
+            <p class="finance-text">Finance Graduate</p>
             <h1>Hi, I'm <span>Qianqian</span><br><span class="dive-text"> Dive into my work here!</span></h1>
         </div>
         <div class="important-icon">     
@@ -34,12 +34,13 @@
     </div>
 </div>
 
+
 <!-- ----------------about----------------- -->
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.png">
+                <img src="images_new/user.png">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -177,10 +178,8 @@
 
 
 <script>
-
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
-    
     function opentab(tabname){
         for(tablink of tablinks){
             tablink.classList.remove("active-link");
@@ -191,22 +190,18 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
-
 </script>
 
 <script>
-
     var sidemeu = document.getElementById("sidemenu");
-
     function openmenu(){
         sidemeu.style.right = "0";
     }
     function closemenu(){
         sidemeu.style.right = "-200px";
     }
-
-    
 </script>
+
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwhcO9oDNlk8hvSVnveKQwqeohS7wDTfU_8v04AhxEb9tK7GiSyNj9gsXJ-_CGfJIIMkA/exec'
     const form = document.forms['submit-to-google-sheet']
@@ -216,7 +211,7 @@
       e.preventDefault();
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
-            msg.innerHTML = "Message sent successfully";
+            msg.innerHTML = "Message sent successfully!";
             setTimeout(function(){
                 msg.innerHTML = "";
             },10000)
@@ -227,9 +222,8 @@
             msg.innerHTML = "Failed to send message. Please try again.";
     });
 });
+  
   </script>
-
-
 
 
 </body>
