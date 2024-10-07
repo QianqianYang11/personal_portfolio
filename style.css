@@ -403,21 +403,21 @@ nav .fas{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/picture.JPG);
+        background: url(images_new/small_background.JPG);
     }
     .header-text{
-        margin-top: 100%;
-        font-size: 16px;
+        margin-top: 19%;
+        font-size: 22px;
     }
     .header-text h1{
-        font-size: 30px;
+        font-size: 35px;
     }
     nav .fas{
         display: block;
         font-size: 25px;
     }
     nav ul{
-        background: #EF852F;
+        background: #EF852F;  /* navigation entire part*/
         position: fixed;
         top: 0;
         right: -200px;
@@ -437,6 +437,21 @@ nav .fas{
         left: 25px;
         cursor: pointer;
     }
+    nav ul .fa-xmark{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        font-size: 40px;
+        color: #823D32;
+        font-weight: 900;
+    }
+    nav .fa-bars{
+        display: block;
+        font-size: 40px;
+    }
+
+    
     .sub-title{
         font-size: 40px;
     }
