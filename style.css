@@ -38,7 +38,7 @@ nav{
         opacity: 1;
     }
     50% {
-        opacity: 0.5; 
+        opacity: 0.7; 
     }
 }
 /* -------------------------------------------- */
@@ -51,11 +51,11 @@ nav ul li a{
     background-color: #823D32;
     color: #f3e8d0;  /*severl general buttons on the top */
     text-decoration:none;
-    font-size: 16 px;
+    font-size: 18px;
     position: relative;
     font-weight: 600;
     display:block;
-    margin: 50px auto;
+    margin: 50px auto;  /*blank above*/
     width: fit-content;
     border: 1px solid #823D32;
     padding: 14px 30px;
@@ -74,7 +74,7 @@ nav ul li a:hover{
     font-weight: 540;
 }
 .finance-text {
-    color:#823D32
+    color:#823D32;
     tansition: 0.5s ease-in-out;
 }
 .finance-text:hover {
@@ -138,59 +138,91 @@ nav ul li a:hover{
 .about-col-2{
     flex-basis: 60%;
 }
-
-.sub-title{
+.about-col-2 p {    /* the content of about me*/
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-top: 16px;
+    text-align: justify;
+}  
+.sub-title{   /*"About Me"*/
     font-size: 60px;
     font-weight: 600;
     color: #823D32;
 }
-
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;
 }
-.tab-links{
+@keyframes twinkle {
+    0%, 100% {
+        background: linear-gradient(135deg, #fbe5b7, #fae5b7, #ffe3a7); /* Light to dark orange */
+    }
+    50% {
+        background: linear-gradient(135deg, #f8da9a, #fce2aa, #ffe6b0); /* Medium to darker orange */
+    }
+}
+.tab-titles .tab-links{
     margin-right: 50px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     position: relative;
+    margin-top: 10px;
+    margin-bottom: -12px;
+    padding: 12px 20px;
+    background-color: #f3e8d0;
+    color: #823D32;
+    border-radius: 30px;
+    position: relative;
+    width: fit-content;
+    display: block;
+    text-decoration: none;
+    word-spacing: 100px;
+    transition: transform 1s;
+    animation: twinkle 0.7s infinite;
 }
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #EF852F;
-    position: absolute;
-    left:0;
-    bottom: -8px;
-    transition: 0.5s;
+.tab-titles .tab-links:hover{
+    transform: translateY(-13px);
+}
+.tab-titles .tab-links.active {
+    background-color: #7b2b26;
+    animation: twinkle 6s infinite; 
+    transform: translateY(-12px);
+    color: #f3e8d0;
 }
 
-.tab-links.active-link::after{
-    width: 50%;
+.tab-titles .tab-links::after {
+    content: none; 
 }
-
 .tab-contents ul li{
     list-style: none;
     color: #823D32;  /* job content*/
     margin: 15px 0;
+    font-weight: 500;
+    font-size: 16px;
 }
 .tab-contents ul li span{
-    color:#EF852F;   /* job title*/
+    color:#ef580c;   /* job title*/
     font-weight: 600;
-    font-size: 16 px;
+    font-size: 18px;
 }
 .tab-contents{
     display: none;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 .tab-contents.active-tab{
     display: block;
+    opacity: 1;
 }
 
 /* ------------------Services-------------- */
 #services{
     padding: 30px 0;
+    margin-top: 40px;
 }
 .services-list{
     display: grid;
@@ -201,9 +233,11 @@ nav ul li a:hover{
 .services-list div{
     background: #FFCC80;
     padding: 40px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 300;
     border-radius: 30px;
+    text-align: center;
+    align-items: center;
     transition: background 0.5s, transform 0.5s;
 }
 .services-list div i{
@@ -262,7 +296,7 @@ nav ul li a:hover{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
     transition: height 0.5s;
 }
@@ -394,15 +428,16 @@ form .btn2{
 }
 
 
-
-
 /* -----------------css for small screen---------- */
 nav .fas{
     display: none;
 }
-
-
-@media only screen and (max-width: 600px){
+@media only screen and (min-width: 700px) {
+    nav .fa-bars, nav .fa-xmark {
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px){
     #header{
         background: url(images_new/small_background.JPG);
     }
@@ -451,8 +486,6 @@ nav .fas{
         display: block;
         font-size: 40px;
     }
-
-    
     .sub-title{
         font-size: 40px;
     }
@@ -473,7 +506,7 @@ nav .fas{
         flex-basis: 100%;
     }
     .copyright{
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 #msg{

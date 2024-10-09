@@ -28,8 +28,8 @@
             <h1>Hi, I'm <span>Qianqian</span><br><span class="dive-text"> Dive into my work here!</span></h1>
         </div>
         <div class="important-icon">     
-            <a href="https://github.com/QianqianYang11"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/qianqian9712/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/QianqianYang11"><i class="fa-brands fa-github"></i></a>
         </div>
     </div>
 </div>
@@ -46,9 +46,9 @@
                 <h1 class="sub-title">About Me</h1>
                 <p> Hello! I'm Qianqian, a finance graduate from Lund University. I am currently based in Gothenburg, Sweden and I am open for relocation. With experience in consulting and equity research, I am skilled in communication and financial analysis. I am a social person who thrives in cross-functional environments. My passion for business and IT area drives my commitment to continuous learning and personal growth, and I look forward to new opportunities ahead. </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" data-tab="skills" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" data-tab="experience" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" data-tab="education" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -90,22 +90,22 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div>
-                <i class="fa-brands fa-codepen"></i>
+                <i class="fa-solid fa-handshake"></i>
                 <h2>Customer Service</h2>
                 <p>Communication, quick responses, and client satisfaction.</p>
-                <a href="#">Learn more</a>
+                <!-- <a href="#">Learn more</a> -->
             </div>
             <div>
                 <i class="fa-solid fa-compass-drafting"></i>
                 <h2>Financial Analysis</h2>
                 <p>Budgeting, forecasting, and performance evaluation.</p>
-                <a href="#">Learn more</a>
+                <!-- <a href="#">Learn more</a> -->
             </div>
             <div>
-                <i class="fa-solid fa-money-bill"></i>
-                <h2>Web design</h2>
+                <i class="fa-solid fa-desktop"></i>
+                <h2>Web Design</h2>
                 <p>Custom websites for enhanced engagement.</p>
-                <a href="#">Learn more</a>
+                <!-- <a href="#">Learn more</a> -->
             </div>
         </div>
     </div>
@@ -120,27 +120,27 @@
                 <div class="layer">
                     <h3>Python Projects</h3>
                     <p> <p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/QianqianYang11?tab=repositories&q=&type=&language=python&sort="><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
                 <img src="images_new/work-2.jpg">
                 <div class="layer">
-                    <h3>Java Projects</h3>
+                    <h3>PowerBI</h3>
                     <p> <p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/QianqianYang11?tab=repositories&q=Powerbi&type=&language=&sort="><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
                 <img src="images_new/work-3.jpg">
                 <div class="layer">
-                    <h3>Content Writting</h3>
+                    <h3>Java Projects</h3>
                     <p> <p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <a href="https://github.com/QianqianYang11?tab=repositories&q=&type=&language=html&sort="><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="https://github.com/QianqianYang11?tab=repositories" class="btn">See more</a>
     </div>
 </div>
 <!-- ---------------------contact----------------- -->
@@ -152,8 +152,8 @@
                 <p><i class="fa-solid fa-paper-plane"></i> yqq468707631@gmail.com</p>
                 <p><i class="fa-solid fa-square-phone"></i> +46 764280362</p>
                 <div class="social-icon">     
-                    <a href="https://github.com/QianqianYang11"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/qianqian9712/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/QianqianYang11"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.instagram.com/yu.yu2673/"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61551016870464%5C"><i class="fa-brands fa-facebook"></i></a>
                 </div>
@@ -223,8 +223,28 @@
     });
 });
   
-  </script>
+</script>
 
+<script>
+    function opentab(tabName) {
+    const tabLinks = document.querySelectorAll('.tab-links');
+    const tabContents = document.querySelectorAll('.tab-contents');
+    tabLinks.forEach(link => {
+        link.classList.remove('active');
+        link.style.animation = 'twinkle 1.5s infinite'; 
+    });
+    tabContents.forEach(content => {
+        content.classList.remove('active-tab');
+    });
+    const activeTab = document.querySelector(`.tab-links[data-tab="${tabName}"]`);
+    activeTab.classList.add('active');
+    activeTab.style.animation = 'none'; 
+
+    const activeContent = document.getElementById(tabName);
+    activeContent.classList.add('active-tab');
+}
+
+</script>
 
 </body>
 </html>
