@@ -355,12 +355,19 @@ nav ul li a:hover{
     margin-right: 15px;
     font-size: 25px;
 }
+.contact-left .email{
+    margin-top: 40px;
+    margin-bottom: -5px;
+}
+.contact-left .phone{
+    margin-bottom: 40px;
+}
 .social-icon{
     margin-top: 30px;
 }
 .social-icon a{
     text-decoration: none;
-    font-size: 30px;
+    font-size: 35px;
     margin-right: 15px;
     color: #823D32;  /* Facebook,linkedin.. icon */
     display: inline-block;
@@ -368,7 +375,7 @@ nav ul li a:hover{
 }
 .social-icon a:hover{
     color: #823D32;  /* Facebook,linkedin.. icon change*/
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .social-icon a i.fa-github {
@@ -442,11 +449,14 @@ nav .fas{
         background: url(images_new/small_background.JPG);
     }
     .header-text{
-        margin-top: 19%;
+        margin-top: 22%;
         font-size: 22px;
     }
     .header-text h1{
-        font-size: 35px;
+        font-size: 30px;
+    }
+    .header-text h1 .dive-text{
+        font-size: 30px;
     }
     nav .fas{
         display: block;
@@ -457,7 +467,7 @@ nav .fas{
         position: fixed;
         top: 0;
         right: -200px;
-        width: 200px;
+        width: 190px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
@@ -496,11 +506,29 @@ nav .fas{
         margin-bottom: 30px;
     }
     .about-col-2{
-        font-size: 14px;
+        font-size: 16px;
     }
+    .about-col-2 p {    /* the content of about me*/
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+        margin-top: 20px;
+        margin-right: 40px;
+        text-align: justify;
+    }  
+
     .tab-links{
         font-size: 16px;
         margin-right: 20px;
+    }
+    .tab-contents ul li{
+        list-style: none;
+        color: #823D32;  /* job content*/
+        margin: 15px 0;
+        font-weight: 500;
+        font-size: 16px;
+        margin-right: 20px;
+        text-align: left;
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
