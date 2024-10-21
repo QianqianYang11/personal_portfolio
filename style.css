@@ -502,9 +502,6 @@ nav .fas{
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
-    .about-col-2 {
-        flex-basis: 60%; /* Adjust for larger screens */
-    }
     .about-col-1{
         margin-bottom: 30px;
     }
@@ -526,7 +523,7 @@ nav .fas{
     }
     .tab-contents ul li{
         list-style: none;
-        color: #823D32;  /* job content*/
+        color: #823D32;  /* Skill, Experience, education*/
         margin: 15px 0;
         font-weight: 500;
         font-size: 16px;
