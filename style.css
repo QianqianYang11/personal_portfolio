@@ -136,6 +136,10 @@ nav ul li a:hover{
     width: 100%;
     border-radius: 30px;
 }
+.about-col-1, .about-col-2 {
+    flex-basis: 100%; /* Make columns take full width on mobile */
+    margin: 0; /* Remove margin to prevent overflow */
+}
 .about-col-2{
     flex-basis: 60%;
 }
