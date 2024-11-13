@@ -212,8 +212,27 @@ nav ul li a:hover {
 }
 
 .tab-titles .tab-links::after {
-  content: none;
-}
+    content: "Click here!";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    font-size: 14px;
+    color: #7b2b26; /* Tooltip text color */
+    visibility: hidden; /* Hide the tooltip by default */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap; /* Allow the text to wrap naturally */
+    word-wrap: normal;
+    word-spacing: 0;
+    letter-spacing: 0;
+  }
+  
+  .tab-titles .tab-links:hover::after {
+    visibility: visible;
+    opacity: 1;
+  }
 .tab-contents ul li {
   list-style: none;
   color: #823d32; /* job content*/
@@ -231,7 +250,6 @@ nav ul li a:hover {
   font-size: 16px;
   line-height: 1.5;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
 }
 .tab-contents.active-tab {
   display: block;
