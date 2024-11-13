@@ -157,6 +157,9 @@ nav ul li a:hover {
 .tab-titles {
   display: flex;
   margin: 20px 0 40px;
+  justify-content: flex-end;
+  margin-left: -10px;
+  margin-right: -100px;
 }
 @keyframes twinkle {
   0%,
@@ -185,6 +188,7 @@ nav ul li a:hover {
   position: relative;
   margin-top: 10px;
   margin-bottom: -12px;
+  margin-right: auto;
   padding: 12px 20px;
   background-color: #f3e8d0;
   color: #823d32;
