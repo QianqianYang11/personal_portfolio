@@ -563,7 +563,7 @@ nav .fas {
 
   .tab-titles {   /*skills, experiencne, part time ... button */
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 18px;
     align-items: flex-start;
   }
   .tab-titles .tab-links {
