@@ -594,8 +594,42 @@ nav .fas {
   .copyright {
     font-size: 12px;
   }
+
+
+
 }
 
+#portfolio {
+  padding: 30px 0; 
+}
+.work-list {
+  gap: 20px; 
+}
+.work {
+  border-radius: 20px;
+}
+.work-content {
+  flex-direction: column; 
+}
+.work img {
+  width: 100%; /* Make the image responsive */
+  max-width: 100%;
+}
+.layer {
+  padding: 20px; /* Reduce padding for smaller screens */
+}
+.layer h3 {
+  font-size: 16px; /* Reduce title font size */
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+.layer p {
+  font-size: 16px; /* Reduce paragraph font size */
+}
+.work-description {
+  padding: 10px; /* Reduce padding in description */
+  font-size: 16px; /* Reduce font size */
+}
 
 
 
