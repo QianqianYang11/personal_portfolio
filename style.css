@@ -558,7 +558,8 @@ nav .fas {
     font-weight: 500;
     margin-top: 20px;
     margin-right: 40px;
-    text-align: left;
+    text-align: justify;
+    /* text-align: left; */
   }
 
   .tab-titles {   /*skills, experiencne, part time ... button */
