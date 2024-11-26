@@ -566,13 +566,14 @@ nav .fas {
     font-size: 16px;
     margin-bottom: 18px;
     align-items: flex-start;
+    gap: 15px;
   }
   .tab-titles .tab-links {
     font-size: 16px;
     padding: 6px 8px;
     margin-left: -10px;
     margin-bottom: 15px;
-    width: auto;
+    width: calc(50% - 10px);
   }
   .tab-contents ul li {
     font-size: 16px;
@@ -594,10 +595,6 @@ nav .fas {
   .copyright {
     font-size: 12px;
   }
-
-
-
-
 
 #portfolio {
   padding: 30px 0; 
