@@ -616,12 +616,12 @@ nav .fas {
   padding: 20px; /* Reduce padding for smaller screens */
 }
 .layer h3 {
-  font-size: 16px; /* Reduce title font size */
+  /* font-size: 16px;  */
   margin-top: -10px;
   margin-bottom: 15px;
 }
 .layer p {
-  font-size: 16px; /* Reduce paragraph font size */
+  font-size: 16px; 
 }
 .work-description {
   padding: 10px; /* Reduce padding in description */
