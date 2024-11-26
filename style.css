@@ -563,19 +563,31 @@ nav .fas {
     text-align: left;
   }
 
-  .tab-links {
+  .tab-titles {   /*skills, experiencne, part time ... button */
+    text-align: left;
     font-size: 16px;
-    margin-right: 20px;
+    margin-bottom: 8px;
   }
+  .tab-titles .tab-links {
+    display: inline-block;
+    font-size: 16px;
+    padding: 6px 8px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-bottom: 0px;
+  }
+
   .tab-contents ul li {
     list-style: none;
-    color: #823d32; /* Skill, Experience, education*/
+    color: #823d32;
     margin: 15px 0;
     font-weight: 500;
     font-size: 16px;
     margin-right: 20px;
     text-align: left;
   }
+
+  
   .contact-left,
   .contact-right {
     flex-basis: 100%;
@@ -584,6 +596,13 @@ nav .fas {
     font-size: 12px;
   }
 }
+
+
+
+
+
+
+
 #msg {
   color: #d72323;
   margin-top: -40px;
